@@ -1,0 +1,24 @@
+#
+# Run File created 5/07/2013 12:10:22 PM
+#
+
+#
+# 
+#
+
+# Ch0_Incident WP                     Moving          5.7829(x - zero)
+# Ch1_Phase WP                        Moving          5.5850(x - zero)
+# Ch2_WP1                             Moving          13.590(x - zero)
+# Ch3_WP2                             Moving          13.255(x - zero)
+
+TITLE="Calibration"
+VARIABLES="Time" "Ch0_Incident WP" "Ch1_Phase WP" "Ch2_WP1" "Ch3_WP2" 
+ZONE T="Calibration" F=POINT 
+0.000000 0.296157 0.442424 0.126796 -0.031863 
+1.000000 5.782945 5.584991 13.589953 13.254707 
+
+TITLE="Data"
+VARIABLES="Time" "Ch0_Incident WP" "Ch1_Phase WP" "Ch2_WP1" "Ch3_WP2" 
+ZONE T="Data" F=POINT 
+0.000000 0.213497 0.403007 0.150005 -0.039504 
+0.005000 0.218010 0.405585 0.149038 -0.042083 
