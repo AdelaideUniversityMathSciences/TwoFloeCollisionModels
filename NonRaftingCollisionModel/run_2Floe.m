@@ -1,4 +1,4 @@
-% function run_SS_2Floe(runno)
+% function run_2Floe(runno)
 %
 % LJ YIEW
 % Created on  May 2015
@@ -25,7 +25,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function run_SS_2Floe(runno,Cd)
+function run_2Floe(runno,Cd)
 
 close all
 tic
