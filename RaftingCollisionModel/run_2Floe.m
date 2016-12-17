@@ -425,7 +425,7 @@ end
        
       if FRU(2) < RLL(2) || FRL(2) > RLU(2)
        display('Rafting!')
-       cc = 0;
+%        cc = 0;
       else
        display('Collision!')
       end
