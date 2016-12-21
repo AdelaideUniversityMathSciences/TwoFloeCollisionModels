@@ -120,8 +120,7 @@ trans_e = trans;
 close(gcf)
 
 %  FITTED WAVE PARAMETERS
-[f] = fn_WaveFit(runno,0,trans_e,1,[0.1 0 0]); % ### if error: change +/- 0.1
-% f.a=H/2;f.b=3;f.c=0;
+[f] = fn_WaveFit(runno,0,trans_e,1)%,[-0.1 0 0]); % ### if error: change +/- 0.1
 
 %  FIND CLOSEST TIME TO STEADY STATE AMPLITUDE (H/2)
 tt = linspace(0,trans_e,10000);

@@ -70,9 +70,9 @@ set(gcf,'position',[100 400 600 400]);
 box on
 for j = 1:length(At)
  if At(j) == 10*1e-3
-%   plot(freq(j),cfreq_e(j),'kv','MarkerSize',14)
+  plot(freq(j),cfreq_e(j),'kv','MarkerSize',14)
  elseif At(j) == 20*1e-3
-%   plot(freq(j),cfreq_e(j),'bo','MarkerSize',14)
+  plot(freq(j),cfreq_e(j),'bo','MarkerSize',14)
  elseif At(j) == 40*1e-3
   plot(freq(j),cfreq_e(j),'r^','MarkerSize',14)
  end
@@ -81,9 +81,9 @@ end
 %  MODEL
 for j = 1:length(At)
  if At(j) == 10*1e-3
-%   plot(freq(j),cfreq_m(j),'k.','MarkerSize',20)
+  plot(freq(j),cfreq_m(j),'k.','MarkerSize',20)
  elseif At(j) == 20*1e-3
-%   plot(freq(j),cfreq_m(j),'b.','MarkerSize',20)
+  plot(freq(j),cfreq_m(j),'b.','MarkerSize',20)
  elseif At(j) == 40*1e-3
   plot(freq(j),cfreq_m(j),'r.','MarkerSize',20)
  end
@@ -124,9 +124,9 @@ box on
 for j = 1:length(At)
  if ~isnan(cvel_e(j))
   if At(j) == 10*1e-3
-%    plot(freq(j),cvel_e(j),'kv','MarkerSize',14)
+   plot(freq(j),cvel_e(j),'kv','MarkerSize',14)
   elseif At(j) == 20*1e-3
-%    plot(freq(j),cvel_e(j),'bo','MarkerSize',14)
+   plot(freq(j),cvel_e(j),'bo','MarkerSize',14)
   elseif At(j) == 40*1e-3
    plot(freq(j),cvel_e(j),'r^','MarkerSize',14)
   end
@@ -134,11 +134,11 @@ for j = 1:length(At)
 end
 % MODEL
 for j = 1:length(At)
- if ~isnan(ncol_m(j))
+ if ~isnan(cvel_m(j))
   if At(j) == 10*1e-3
-%    plot(freq(j),cvel_m(j),'k.','MarkerSize',20)
+   plot(freq(j),cvel_m(j),'k.','MarkerSize',20)
   elseif At(j) == 20*1e-3
-%    plot(freq(j),cvel_m(j),'b.','MarkerSize',20)
+   plot(freq(j),cvel_m(j),'b.','MarkerSize',20)
   elseif At(j) == 40*1e-3
    plot(freq(j),cvel_m(j),'r.','MarkerSize',20)
   end
@@ -171,43 +171,43 @@ set(ax,'YTickLabel',{'','','','',''})
 
 %%
 
-% PLOT EMPIRICAL DRAG COEFFICIENT VS FREQUENCY
-
-figure(3)
-hold on
-set(gcf,'position',[300 200 500 300]);
-box on
-% MODEL
-for j = 1:length(At)
- if ~isnan(drag_e(j))
-  if At(j) == 10*1e-3
-   plot(freq(j),drag_e(j),'kv','MarkerSize',14)
-  elseif At(j) == 20*1e-3
-   plot(freq(j),drag_e(j),'bo','MarkerSize',14)
-  elseif At(j) == 40*1e-3
-   plot(freq(j),drag_e(j),'r^','MarkerSize',14)
-  end
- end
-end
-xlim([0.4 1.6])
-ylim([0 0.05])
-ax1 = gca;
-set(ax1,'XTick',[0.4 0.6 0.8 1 1.2 1.4 1.6])
-set(ax1,'XTickLabel',{'0.4','0.6','0.8','1','1.2','1.4','1.6'})
-
-
-% SECOND X SCALE FOR NONDIMENSIONAL WAVELENGTH
-xlabels{1} = 'Wave Frequency [Hz]';
-xlabels{2} = 'Wavelength/Floe Diameter';
-ylabels{1} = 'Drag Coefficient';
-hold on
-plotxx(0,0,0,0,xlabels,ylabels);
-xlim([0.4 1.6])
-ylim([0 0.05])
-ax = gca;
-set(ax,'XTick',[0.4 0.6 0.8 1 1.2 1.4 1.6])
-set(ax,'XTickLabel',{'16.2','9.5','5.9','3.9','2.7','2','1.5'})
-set(ax,'YTickLabel',{'','','','',''})
+% % PLOT EMPIRICAL DRAG COEFFICIENT VS FREQUENCY
+% 
+% figure(3)
+% hold on
+% set(gcf,'position',[300 200 500 300]);
+% box on
+% % MODEL
+% for j = 1:length(At)
+%  if ~isnan(drag_e(j))
+%   if At(j) == 10*1e-3
+%    plot(freq(j),drag_e(j),'kv','MarkerSize',14)
+%   elseif At(j) == 20*1e-3
+%    plot(freq(j),drag_e(j),'bo','MarkerSize',14)
+%   elseif At(j) == 40*1e-3
+%    plot(freq(j),drag_e(j),'r^','MarkerSize',14)
+%   end
+%  end
+% end
+% xlim([0.4 1.6])
+% ylim([0 0.05])
+% ax1 = gca;
+% set(ax1,'XTick',[0.4 0.6 0.8 1 1.2 1.4 1.6])
+% set(ax1,'XTickLabel',{'0.4','0.6','0.8','1','1.2','1.4','1.6'})
+% 
+% 
+% % SECOND X SCALE FOR NONDIMENSIONAL WAVELENGTH
+% xlabels{1} = 'Wave Frequency [Hz]';
+% xlabels{2} = 'Wavelength/Floe Diameter';
+% ylabels{1} = 'Drag Coefficient';
+% hold on
+% plotxx(0,0,0,0,xlabels,ylabels);
+% xlim([0.4 1.6])
+% ylim([0 0.05])
+% ax = gca;
+% set(ax,'XTick',[0.4 0.6 0.8 1 1.2 1.4 1.6])
+% set(ax,'XTickLabel',{'16.2','9.5','5.9','3.9','2.7','2','1.5'})
+% set(ax,'YTickLabel',{'','','','',''})
 
 
 
